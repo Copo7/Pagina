@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divs</title>
+    <link rel="icon" href="yeah.gif">
+    <style>
+        body {margin: 0; background-image:url(https://wallpapers.com/images/high/4k-minecraft-man-in-grassfield-gxn8cak11hmj6ras.webp);background-repeat: no-repeat;background-size: cover;}
+        #contenedor{background-color:grey;}
+        #contenido{background-color:grey;float: right; width: 80%;color: white;}
+        #menu{height: 10%;background-color: darkmagenta;text-decoration: none;justify-content: space-around; align-items: center; text-align: center;padding: 10px;}
+        #menu a{transition: background-color 0.3s ease, transform 0.3s ease;text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;}
+
+        #menu a:hover {
+            background-color: gold;
+            transform: scale(1.1);
+        }
+
+        #izquierda{background-color:rgb(0, 0, 0);float: left;height: 50%; width: 20%;}
+        #pie{background-color:rgb(255, 94, 0); clear: both;}
+        #cabecera{background-color:rgb(238, 255, 0);height: 100%;background-image: url(banner.gif); background-size: 100%;}
+
+        #fotito{width: 100%;}
+        #fotito2{width: 100px;}
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .contact-form {
+            padding: 20px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+       
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+    </style>
+</head>
+<body>
+<div id="contenedor">
+
+    <div id="cabecera"><img src="gmdando.gif" alt=""><img src="diablo3.gif" alt=""></div>
+
+    <div id="menu">
+                <a href="maquetacss.html">Inicio</a>
+                <a href="horario.html">Horario</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="https://www.leagueoflegends.com/es-es/">Acerca de</a>
+    </div>
+
+
+    <div id="izquierda"><img id="fotito" src="door2.gif" alt=""></div>
+    
+    <div id="contenido">
+        <div class="contact-form">
+            <h2>Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div id="pie"> <a href="https://policia.es/_es/index.php#"><img id="fotito" src="Banner3.gif" alt=""></a></div>
+</div>
+</body>
+</html>
