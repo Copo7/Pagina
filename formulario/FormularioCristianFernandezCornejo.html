@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario de contacto</title>
+</head>
+<body>
+<h1>Rica Pizza</h1>
+<h2>Realizar pedido</h2>
+<form action="ejemplo.php" method="get">
+  <p>Nombre Completo: <br> <input type="text" name="nombre" size="40"></p>
+  <p>Dirección: <br> <input type="text" min="1900"></p>
+  <p>Teléfono: <br> <input type="number"></p>
+  <p>Elige tipo de pizza <br> <select name="menu">
+    <option>Pizza 4 estaciones</option>
+    <option>Margarita</option>
+    <option>Carbonara</option>
+    </select>
+</p>
+  <p>Elige tamaño:
+    <br>
+    <input type="radio" name="1"> M
+    <br>
+    <input type="radio" name="1"> L
+    <br>
+    <input type="radio" name="1"> XL
+    <br>
+    <input type="radio" name="1"> XXL
+  </p>
+  <p>Opciones del pedido: <br>
+    <input type="checkbox" name="casilla" checked>Extra de queso
+    <br>
+    <input type="checkbox" name="casilla" checked>Fina
+  </p>
+  <p>
+    <input type="submit" value="Realizar Pedido">
+  </p>
+</form>
+</body>
+</html>
