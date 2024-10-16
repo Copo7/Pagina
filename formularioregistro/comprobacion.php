@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_correcto = "1234";
 
     if ($usuario === $usuario_correcto && $password === $password_correcto) {
-        echo "Login exitoso. ¡Bienvenido, " . htmlspecialchars($usuario) . "!";
+        echo "OLEEEEEEEEEE bienvenido " . htmlspecialchars($usuario) . "!";
     } else {
-        echo "Nombre de usuario o contraseña incorrectos.";
+        echo "Te has equivocado de usuario o contraseña, intentalo de nuevo :D";
     }
 } else {
-    echo "Acceso no permitido.";
+    echo "No tienes acceso a este sitio";
 }
 ?>
