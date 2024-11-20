@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="icon" href="https://play-lh.googleusercontent.com/9ab4jPp8bxExmPCqiTW1cThV6ekUJeRhAsvibBziP1-KUdfMaP7xs8ZS6GuCcg7sRIA">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Letra DNI</title>
+    <title>Verificador de dni Cristian</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contenedor {
+            background-color: #fff555;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        label, input[type="submit"] {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Calculadora de Letra de DNI</h1>
-    <form action="compruebadni.php" method="POST">
-        <label for="dni">Introduce los 8 dígitos del DNI:</label>
-        <input type="text" id="dni" name="dni" maxlength="8" required pattern="\d{8}">
-        <input type="submit" value="Calcular letra">
-    </form>
+    <div class="contenedor">
+        <h1>Comprobador de DNI por Cristian Fernández Cornejo</h1>
+        <form action="compruebadni.php" method="POST">
+            <label for="dni">Pon el DNI con números (8) y una letra:</label>
+            <input type="text" name="dni" id="dni" required pattern="\d{8}[A-Za-z]" maxlength="9" title="Pon los requisitos del título">
+            <input type="submit" value="Verificador Dni">
+        </form>
+    </div>
 </body>
 </html>

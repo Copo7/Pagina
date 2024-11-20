@@ -1,25 +1,19 @@
 <?php
-// Verificamos si el formulario fue enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recogemos el valor del DNI del formulario y lo limpiamos
-    $dni = trim($_POST['dni']);
-
-    // Validamos que sea un número de 8 dígitos
-    if (is_numeric($dni) && strlen($dni) == 8) {
-        // Array de letras del DNI según el resto
+    $dnientero = trim($_POST['dni']);
+    if (preg_match("/^[0-9]{8}[A-Z]$/i", $dnientero)) {
+        $dni = substr($dnientero, 0, 8);
+        $letraAnadida = strtoupper(substr($dnientero, -1)); 
         $letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-
-        // Calculamos el resto de dividir el número del DNI entre 23
         $indice = (int)$dni % 23;
-
-        // Obtenemos la letra correspondiente
-        $letraDNI = $letras[$indice];
-
-        // Mostramos el resultado
-        echo "<h1>El DNI completo es: $dni-$letraDNI</h1>";
+        $letraCorrecta = $letras[$indice];
+        if ($letraAnadida == $letraCorrecta) {
+            echo "<h1>El DNI coincide :D: $dnientero</h1>";
+        } else {
+            echo "<h1>La letra del dni no coincide, esta es su letra $dni$letraCorrecta.</h1>";
+        }
     } else {
-        // Si no es válido, mostramos un mensaje de error
-        echo "<h1>Error: Debes introducir un número de 8 dígitos.</h1>";
+        echo "<h1>El dni no es valido, prueba de nuevo porfa :C</h1>";
     }
 }
 ?>
