@@ -1,0 +1,1 @@
+<img src="<?php echo rand(1, 6) ?>.png">
