@@ -1,0 +1,77 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Page title and paragraph styles */
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+table tr:first-child {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Table cells */
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Alternate row colors */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+table tr:hover {
+    background-color: #e1f5fe;
+}
+
+/* Table adjustments for small screens */
+@media (max-width: 768px) {
+    table, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr:first-child {
+        display: none; /* Hide the header row for small screens */
+    }
+
+    table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        font-weight: bold;
+        text-align: left;
+    }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Cookies</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #e0f7fa; text-align: center; padding: 20px; }
+        body { font-family: Arial, sans-serif; background-color:<?php echo (isset($_COOKIE['fondo']) ? $_COOKIE['fondo'] : 'white') ?>; text-align: center; padding: 20px; }
         h1 { color: #00796b; }
         form { background: #ffffff; padding: 15px; border-radius: 8px; display: inline-block; }
         label { color: #00796b; }
@@ -26,6 +26,7 @@
         <input type="text" name="valor" placeholder="Valor de la cookie" required>
         <button type="submit">Añadir</button>
     </form>
+    <?php if(count($_COOKIE)>0):?>
     <table border="1">
         <tr>
             <td>Nombre</td>
@@ -40,5 +41,6 @@
         </tr>
     <?php endforeach; ?>
     </table>
+    <?php endif; ?>
     </body>
 </html>

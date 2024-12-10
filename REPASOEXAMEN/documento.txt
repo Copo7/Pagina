@@ -1,0 +1,23 @@
+Servicio Web
+    instalación (Apache, Nginx, IIS)
+        -instalación normal
+        -docker
+    Configuración
+        -virtual host
+        -certificado SSL
+            -redireccion de puerto (80 - 443)
+        -Configurar con .htaccess
+            -listado
+            -contraseñas (httpasswd) - basic
+            -redureccuib de errores
+
+Servicio FTP
+    -Instalación (Vsftpd)
+    -Configuración
+        -Usuario
+        -Permisos(Escritura)
+
+Servicio WebDAV
+    -contraseñas (htdigest)
+
+Uso de scripts
