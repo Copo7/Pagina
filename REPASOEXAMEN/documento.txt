@@ -2,6 +2,8 @@ Servicio Web
     instalación (Apache, Nginx, IIS)
         -instalación normal
         -docker
+            -docker run -p XXXX:XXXX -y
+            docker run -d -p 8080:80 --name apache-php -v ~/html:/var/www/html php:8.2-apache
     Configuración
         -virtual host
         -certificado SSL
@@ -9,7 +11,7 @@ Servicio Web
         -Configurar con .htaccess
             -listado
             -contraseñas (httpasswd) - basic
-            -redureccuib de errores
+            -redireccion de errores
 
 Servicio FTP
     -Instalación (Vsftpd)
@@ -18,6 +20,7 @@ Servicio FTP
         -Permisos(Escritura)
 
 Servicio WebDAV
-    -contraseñas (htdigest)
+    -Usuario. Permisos
+    -Contraseñas (htdigest)
 
 Uso de scripts
